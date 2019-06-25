@@ -16,8 +16,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   // max-width: 480px;
-  height: 100%;
+  // height: 100vh;
   margin: 0 auto;
   font-family: sans-serif;
+  display: flex;
+  flex-grow: 1;
 }
 </style>

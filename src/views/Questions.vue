@@ -35,9 +35,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .questions {
-    height: 100%;
     background: #EFEFF4;
     position: relative;
+    flex-grow: 1;
 
     &__title {
       color: #858E99;

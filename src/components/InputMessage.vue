@@ -3,7 +3,7 @@
     .input-message(ref="input")
       form.form
         router-link.form__back(to="/")
-        input.form__input(type="text")
+        input.form__input(type="text" autofocus)
         button.form__submit(type="submit")
 </template>
 
@@ -30,7 +30,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .input-message {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
