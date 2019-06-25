@@ -72,7 +72,6 @@ export default {
     height: 20px;
     padding: 0;
     // background-image: url('../assets/Icon-like-red.svg');
-    
     // background-size: 20px 20px;
     border: none;
     background-color: #fff;
