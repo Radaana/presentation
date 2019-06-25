@@ -1,13 +1,12 @@
 <template lang="pug">
-  .questions.chat-line
+  .comments.chat-line
     button-back
-    .questions__title Все  комментарии:
-    chat-guest-message.bubble.guest(
-      v-for="guestMSG in this.getGuestComments"
-      :key="guestMSG.id" 
-      :class="{ 'guest--question' : guestMSG.isQuestion}"
-      :guestMSG = "guestMSG"
-    )
+    .comments__title Все  комментарии:
+    .comments__thread
+      chat-guest-message.bubble.guest(
+        v-for="guestMSG in this.getGuestComments"
+        :key="guestMSG.id" 
+        :guestMSG = "guestMSG")
     input-message
 </template>
 <script>
@@ -33,10 +32,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  .questions {
-    height: 100%;
+  .comments {
+    flex-grow: 1;
     background: #EFEFF4;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     &__title {
       color: #858E99;

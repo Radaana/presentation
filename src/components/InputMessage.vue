@@ -36,6 +36,7 @@ export default {
   right: 0;
   height: 44px;
   background-color: #fff;
+  z-index: 100;
 }
 .form {
   display: flex;

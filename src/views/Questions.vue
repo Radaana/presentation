@@ -2,12 +2,12 @@
   .questions.chat-line
     button-back
     .questions__title Все  вопросы:
-    chat-guest-message.bubble.guest(
-      v-for="guestMSG in this.getGuestQuestions"
-      :key="guestMSG.id" 
-      :class="{ 'guest--question' : guestMSG.isQuestion}"
-      :guestMSG = "guestMSG"
-    )
+    .questions__thread
+      chat-guest-message.bubble.guest(
+        v-for="guestMSG in this.getGuestQuestions"
+        :key="guestMSG.id" 
+        :class="{ 'guest--question' : guestMSG.isQuestion}"
+        :guestMSG = "guestMSG" )
     input-message
 
 </template>
@@ -38,6 +38,8 @@ export default {
     background: #EFEFF4;
     position: relative;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
     &__title {
       color: #858E99;
