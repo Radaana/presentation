@@ -80,6 +80,7 @@ export default {
   width: 18px;
   height: 20px;
   background: url('../assets/Icon-share-black.svg') center no-repeat;
+  background-size: 18px 20px;
 }
 
 .like {

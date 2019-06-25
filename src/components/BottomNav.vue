@@ -36,6 +36,13 @@ export default {
   right: 0;
   z-index: 100;
 
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+      height: 80px;
+     }
+
   &__link {
     display: block;
     height: 28px;
