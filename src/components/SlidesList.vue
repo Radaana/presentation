@@ -1,6 +1,7 @@
 
 <template lang="pug">
-    .slides(v-show="showSlidesList")
+  transition(name="menu")
+    .slides(v-if="showSlidesList")
       .slides__container
         .slides__title {{getPresentationTitle}}
           button.slides__close(@click="clickClose(!showSlidesList)")
@@ -55,8 +56,8 @@ export default {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1500;
   width: 100%;
-height: 100%;
-    max-height: 100%;
+  height: 100%;
+  max-height: 100%;
 
   &__list {
     overflow-y: scroll;
@@ -88,6 +89,9 @@ height: 100%;
     top: 0;
     right: 0;
     padding: 0;
+    display: block;
+    background: none;
+    border: none;
   }
 }
 
@@ -127,4 +131,18 @@ height: 100%;
       transform: rotate(-45deg);
   }
 }
+
+.menu-enter-active {
+  transition: all .5s ease;
+}
+.menu-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.menu-enter, .menu-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
 </style>
