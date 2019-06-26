@@ -28,7 +28,10 @@ export default {
       'getGuestQuestions'
     ]),
   },
-  methods: {}
+  methods: {},
+  mounted() {
+    window.scrollTo(window.scrollX, window.scrollY);
+  },
 }
 </script>
 

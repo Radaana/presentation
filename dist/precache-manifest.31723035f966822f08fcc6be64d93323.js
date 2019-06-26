@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
   },
   {
-    "revision": "5de3e7c6baf4889defb4",
+    "revision": "f2c91a721e92d30ca82e",
     "url": "/presentation/dist/css/app.0c311899.css"
   },
   {
@@ -24,20 +24,20 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
   },
   {
-    "revision": "ef3b122d16a4c3373f016caa7b338f7c",
-    "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
-  },
-  {
     "revision": "955b3fc5db0b3223d0213e95d96df3d1",
     "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
-    "revision": "17eee2fd3b8b2f24e0d9",
-    "url": "/presentation/dist/js/about.40ca4c1a.js"
+    "revision": "ef3b122d16a4c3373f016caa7b338f7c",
+    "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
   },
   {
-    "revision": "5de3e7c6baf4889defb4",
-    "url": "/presentation/dist/js/app.9d0ee88b.js"
+    "revision": "c9603909cbec329ccf5a",
+    "url": "/presentation/dist/js/about.3434ff4e.js"
+  },
+  {
+    "revision": "f2c91a721e92d30ca82e",
+    "url": "/presentation/dist/js/app.878e8c47.js"
   },
   {
     "revision": "d172b6af6a25038a531d0308280cd00a",
@@ -56,11 +56,11 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-like-white.4b957876.svg"
   },
   {
-    "revision": "479988477bb658e003c881295778d5e1",
+    "revision": "aa95506636afd7459245e571641ad207",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "17eee2fd3b8b2f24e0d9",
-    "url": "/presentation/dist/css/about.74700404.css"
+    "revision": "c9603909cbec329ccf5a",
+    "url": "/presentation/dist/css/about.6fc1feb3.css"
   }
 ];
