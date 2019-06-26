@@ -8,16 +8,20 @@ self.__precacheManifest = [
     "url": "/presentation/dist/robots.txt"
   },
   {
-    "revision": "89459af6f641ebee99d42e79f27aadc0",
-    "url": "/presentation/dist/img/Icon-like-grayborder.89459af6.svg"
+    "revision": "d63de15e45067b8bda47dafa5e295c5f",
+    "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
   },
   {
-    "revision": "5da416b17992be50d7c0",
+    "revision": "d7f75da1d2e0627ef5d8",
     "url": "/presentation/dist/css/app.16fa4fcf.css"
   },
   {
     "revision": "1985445b5257eb0cfc59",
     "url": "/presentation/dist/js/chunk-vendors.107b7308.js"
+  },
+  {
+    "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
+    "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
   },
   {
     "revision": "ef3b122d16a4c3373f016caa7b338f7c",
@@ -28,16 +32,16 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
-    "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
-    "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
+    "revision": "61c0705d58e7d3df536b",
+    "url": "/presentation/dist/js/about.fe535eb2.js"
   },
   {
-    "revision": "4157d5673722df02fafe",
-    "url": "/presentation/dist/js/about.b5e1f4a9.js"
+    "revision": "d7f75da1d2e0627ef5d8",
+    "url": "/presentation/dist/js/app.24370fe7.js"
   },
   {
-    "revision": "5da416b17992be50d7c0",
-    "url": "/presentation/dist/js/app.3ab0bd7d.js"
+    "revision": "89459af6f641ebee99d42e79f27aadc0",
+    "url": "/presentation/dist/img/Icon-like-grayborder.89459af6.svg"
   },
   {
     "revision": "561372ff9e85bec6276e06bdd4cecd0c",
@@ -56,11 +60,11 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-down.d172b6af.svg"
   },
   {
-    "revision": "4bf1856a7378563304b19978f11dcb17",
+    "revision": "9741a6267b57960f243e97da25163986",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "4157d5673722df02fafe",
-    "url": "/presentation/dist/css/about.6c37ba77.css"
+    "revision": "61c0705d58e7d3df536b",
+    "url": "/presentation/dist/css/about.251ca087.css"
   }
 ];

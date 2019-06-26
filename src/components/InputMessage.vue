@@ -4,7 +4,7 @@
       form.form
         router-link.form__back(to="/")
         input.form__input(type="text"  v-model="inputText" @focus="inputFocus()" @blur="inputBlur()")
-        button.form__submit(type="submit" @click.prevent="inputSubmit()" ref="submit"  )
+        button.form__submit(type="submit" @click.prevent="inputSubmit()" ref="submit" @focus.stop="submitFocus()" )
         transition(name="message")
           .form__message(v-show="showMessage") Сообщение отправлено
 </template>
@@ -57,6 +57,7 @@ export default {
     inputBlur() {
       this.$refs.input.classList.remove('move');
     },
+    submitFocus() {},
   },
   mounted() {
     this.sendHeight();
@@ -117,19 +118,20 @@ export default {
     width: 26px;
     height: 26px;
     padding: 0;
-    // background-image: url('../assets/Icon-like-red.svg');
-    // background-size: 20px 20px;
+    background-image: url('../assets/Icon-arrow-up.svg');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
     border: none;
     background-color: #fff;
 
-    &::before {
-      content: "";
-      border: 13px solid transparent;	border-left: 13px solid #000;
-      padding: 0;
-      position: absolute;
-      top: 0;
-      left: 10px;
-    }
+    // &::before {
+    //   content: "";
+    //   border: 13px solid transparent;	border-left: 13px solid #000;
+    //   padding: 0;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 10px;
+    // }
   }
   &__message {
     position: absolute;

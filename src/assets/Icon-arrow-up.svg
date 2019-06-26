@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.7,28.9 L18.7,9.2038 L24.2981,14.8019 C24.9628,15.4666 26.0372,15.4666 26.7019,14.8019 C27.3666,14.1372 27.3666,13.0628 26.7019,12.3981 L18.2019,3.8981 C17.5372,3.2334 16.4628,3.2334 15.7981,3.8981 L7.2981,12.3981 C6.9666,12.7296 6.8,13.1648 6.8,13.6 C6.8,14.0352 6.9666,14.4704 7.2981,14.8019 C7.9628,15.4666 9.0372,15.4666 9.7019,14.8019 L15.3,9.2038 L15.3,28.9 C15.3,29.8401 16.0599,30.6 17,30.6 C17.9401,30.6 18.7,29.8401 18.7,28.9" id="path-1"></path>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#68A1EF" cx="26" cy="26" r="26"></circle>
+        <g id="Polaris-icon/Minor/Mono/Arrow-Up" transform="translate(9.000000, 9.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Icon" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
