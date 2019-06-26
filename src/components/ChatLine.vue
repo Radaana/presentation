@@ -1,27 +1,33 @@
 <template lang="pug">
   .chat-line(ref="chatline")
-    chat-thread(
-      v-for="speakerMSG in this.getSpeakerMessages"
-      :key="speakerMSG.id"
-      :speakerMSG="speakerMSG"
+    chat-message(
+      v-for="MSG in this.getTread"
+      :key="MSG.id" 
+      :MSG = "MSG"
     )
 </template>
 
 <script>
-import { mapGetters} from 'vuex'
-import chatThread from '@/components/ChatThread.vue'
+import { mapGetters, mapActions } from 'vuex'
+import chatMessage from '@/components/ChatMessage.vue'
 export default {
   name: 'ChatLine',
   components: {
-    chatThread
+    chatMessage
   },
   props: {
     surveysHeight: Number,
   },
   computed: {
     ...mapGetters([
-      'getSpeakerMessages'
+      'getAllMessages',
     ]),
+    ...mapActions([
+      'changeMessageLike'
+    ]),
+    getTread() {
+      return this.getAllMessages
+    },
   },
   methods: {
     attachPadding () {
@@ -29,7 +35,6 @@ export default {
       document.querySelector('.chat-line').setAttribute("style", style);
     }
   },
-
 }
 </script>
 
@@ -39,10 +44,6 @@ export default {
   background: #EFEFF4;
   height: 100%;
   padding-top: 16px;
-
-  h2 {
-    margin: 0;
-  }
 }
 
 

@@ -1,13 +1,15 @@
 <template lang="pug">
-  .guest__container
+  .bubble(:class= "this.classList")
     .guest__like(
-      @click="clickMessageLike(guestMSG.ID, !like)"
-      :class="{ 'guest__like--active' : this.guestMSG.like}"
-      ) {{ this.guestMSG.likeNumber ? this.guestMSG.likeNumber : ''}}
+      v-if="!MSG.isSpeaker"
+      @click="clickMessageLike(MSG.ID, !like)"
+      :class="{ 'guest__like--active' : this.MSG.like}"
+      ) {{ this.MSG.likeNumber ? this.MSG.likeNumber : ''}}
+    .speaker__img(v-if="MSG.isSpeaker")
+      img(:src="this.getSpeaker.pic")
     .guest__message
-      .guest__name {{this.guestMSG.authorName}}
-      .guest__text {{this.guestMSG.text}}
-        
+      .guest__name {{this.MSG.authorName}}
+      .guest__text {{this.MSG.text}}
 </template>
 
 <script>
@@ -15,17 +17,26 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'ChatGuestMessage',
   props: {
-    guestMSG: Object
+    MSG: Object
   },
   computed: {
     ...mapGetters([
-      'getCommentsToSpeakerMSG',
+      'getSpeaker'
     ]),
     ...mapActions([
       'changeMessageLike'
     ]),
     like() {
-      return this.guestMSG["like"];
+      return this.MSG["like"];
+    },
+    classList() {
+      if(this.MSG.isSpeaker) {
+        return "speaker"
+      } else {
+        let guest = "guest";
+        if(this.MSG.isQuestion) guest += " guest--question"
+        return guest
+      }
     }
   },
   methods: {
@@ -39,11 +50,45 @@ export default {
 
 <style scoped lang="scss">
 
+
 .bubble {
   min-height: 50px;
   padding: 16px;
   position: relative;
   font-size: 14px;
+}
+.speaker {
+  background: #D0E7FF;
+  border-radius: 0px 10px 10px 0px;
+  margin: 0 35px 15px 0;
+
+
+
+  &__img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    right : -14px;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__name {
+    color: #858E99;
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: 'Спикер - ';
+      color: inherit;
+      font-size: inherit;
+    }
+  }
 }
 
 .guest {

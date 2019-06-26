@@ -114,8 +114,8 @@ let state = {
     }
 }
 let getters = {
-    getSpeakerMessages() {
-        return state.messages.filter(msg => msg.isSpeaker)
+    getAllMessages() {
+        return state.messages
     },
     getGuestQuestions() {
         return state.messages.filter(msg => msg.isQuestion && !msg.isSpeaker)
@@ -126,14 +126,6 @@ let getters = {
     getSpeaker() {
         return state.speaker
     },
-    getCommentsToSpeakerMSG(state) {
-        return ID => {
-            let msgs = state.messages
-                .filter(msg => { return msg.isCommentToID === ID })
-                .sort((a, b) => b.likeNumber - a.likeNumber);
-            return msgs;
-        }
-    }
 }
 let mutations = {
     changeMessageLike(state, payload) {
