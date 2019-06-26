@@ -3,19 +3,38 @@
     .input-message(ref="input")
       form.form
         router-link.form__back(to="/")
-        input.form__input(type="text" autofocus)
-        button.form__submit(type="submit")
+        input.form__input(type="text" autofocus v-model="inputText")
+        button.form__submit(type="submit" @click.prevent="inputSubmit()")
 </template>
 
 <script>
+import {mapActions } from 'vuex'
 export default {
   name: 'InputMessage',
+  data() {
+    return {
+      inputText: '',
+    }
+  },
+  computed: {
+  ...mapActions([
+    'addGuestMessage'
+  ]),
+  },
   methods: {
     sendHeight() {
       let style = "padding-bottom:" + (this.$refs.input.offsetHeight + 16) + "px;";
       let chatline = document.querySelector('.chat-line');
       let css = chatline.getAttribute('style') ? chatline.getAttribute('style') + style : style;
       chatline.setAttribute("style",  css);
+    },
+    inputSubmit() {
+      console.log(this.$route.path);
+      let isQuestion = this.$route.path == '/questions';
+      let text = this.inputText;
+      let payload = { text,isQuestion };
+      console.log(payload)
+      this.$store.dispatch('addGuestMessage', payload);
     }
   },
   mounted() {

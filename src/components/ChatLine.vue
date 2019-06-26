@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import chatMessage from '@/components/ChatMessage.vue'
 export default {
   name: 'ChatLine',
@@ -21,9 +21,6 @@ export default {
   computed: {
     ...mapGetters([
       'getAllMessages',
-    ]),
-    ...mapActions([
-      'changeMessageLike'
     ]),
     getTread() {
       return this.getAllMessages

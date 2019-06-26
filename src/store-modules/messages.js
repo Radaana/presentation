@@ -8,7 +8,6 @@ let state = {
             authorName: "Самый Главный",
             isSpeaker: true,
             isQuestion: false,
-            isCommentToID: null,
         },
         {
             ID: 2,
@@ -18,7 +17,6 @@ let state = {
             authorName: "Самый Главный",
             isSpeaker: true,
             isQuestion: false,
-            isCommentToID: null,
         },
         {
             ID: 3,
@@ -29,7 +27,6 @@ let state = {
             authorName: "Сусанин",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 2,
         },
         {
             ID: 4,
@@ -40,7 +37,6 @@ let state = {
             authorName: "Незнайка",
             isSpeaker: false,
             isQuestion: true,
-            isCommentToID: 2,
         },
         {
             ID: 5,
@@ -51,7 +47,6 @@ let state = {
             authorName: "Всезнайка",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 2,
         },
         {
             ID: 6,
@@ -62,7 +57,6 @@ let state = {
             authorName: "Всезнайка",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 1,
         },
         {
             ID: 7,
@@ -72,7 +66,6 @@ let state = {
             authorName: "Самый Главный",
             isSpeaker: true,
             isQuestion: false,
-            isCommentToID: null,
         },
         {
             ID: 8,
@@ -83,7 +76,6 @@ let state = {
             authorName: "Кот Матроскин",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 2,
         },
         {
             ID: 9,
@@ -94,7 +86,6 @@ let state = {
             authorName: "Повторятор",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 2,
         },
         {
             ID: 10,
@@ -105,12 +96,14 @@ let state = {
             authorName: "Томат",
             isSpeaker: false,
             isQuestion: false,
-            isCommentToID: 2,
         },
     ],
     speaker: {
         name: "Самый Главный",
         pic: "https://kulturologia.ru/img/avatar/avatar375901.jpg"
+    },
+    guest: {
+        name: "Это я"
     }
 }
 let getters = {
@@ -126,6 +119,9 @@ let getters = {
     getSpeaker() {
         return state.speaker
     },
+    getGuest() {
+        return state.guest
+    }
 }
 let mutations = {
     changeMessageLike(state, payload) {
@@ -135,10 +131,27 @@ let mutations = {
             }
         }
     },
+    addGuestMessage(state, payload) {
+        let newMessage = {
+            ID: Math.random().toString(36).substr(2, 9),
+            text: payload.text,
+            like: false,
+            likeNumber: null,
+            presentationID: 1,
+            authorName: state.guest.name,
+            isSpeaker: false,
+            isQuestion: payload.isQuestion
+        };
+        state.messages.push(newMessage);
+
+    },
 }
 let actions = {
     changeMessageLike(context, payload) {
         context.commit('changeMessageLike', payload)
+    },
+    addGuestMessage(context, payload) {
+        context.commit('addGuestMessage', payload)
     },
 }
 

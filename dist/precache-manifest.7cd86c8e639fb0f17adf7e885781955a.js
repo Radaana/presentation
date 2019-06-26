@@ -12,32 +12,32 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
   },
   {
-    "revision": "0bc41264e16a03f26308",
-    "url": "/presentation/dist/css/app.8ded9ffb.css"
+    "revision": "dd7c8506513f870bf403",
+    "url": "/presentation/dist/css/app.6dd98f44.css"
   },
   {
-    "revision": "ed43ff7b2e3f1329667f",
-    "url": "/presentation/dist/js/chunk-vendors.76253127.js"
+    "revision": "1985445b5257eb0cfc59",
+    "url": "/presentation/dist/js/chunk-vendors.107b7308.js"
   },
   {
     "revision": "ef3b122d16a4c3373f016caa7b338f7c",
     "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
   },
   {
-    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
-    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
-  },
-  {
     "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
     "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
   },
   {
-    "revision": "27aaa4c4a1c16e6a1b2d",
-    "url": "/presentation/dist/js/about.3a17bf5e.js"
+    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
+    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
-    "revision": "0bc41264e16a03f26308",
-    "url": "/presentation/dist/js/app.d040da0e.js"
+    "revision": "864d34301b58bc7b55ad",
+    "url": "/presentation/dist/js/about.6a16665b.js"
+  },
+  {
+    "revision": "dd7c8506513f870bf403",
+    "url": "/presentation/dist/js/app.15a4aa3e.js"
   },
   {
     "revision": "d172b6af6a25038a531d0308280cd00a",
@@ -48,19 +48,19 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-share.561372ff.svg"
   },
   {
-    "revision": "4b957876e82a4642fbec10f1fa8b6ff7",
-    "url": "/presentation/dist/img/Icon-like-white.4b957876.svg"
-  },
-  {
     "revision": "a2255106f22f7996b8f80dbb626cad52",
     "url": "/presentation/dist/img/Icon-like.a2255106.svg"
   },
   {
-    "revision": "2c8df381df679affa9f60789130a9529",
+    "revision": "4b957876e82a4642fbec10f1fa8b6ff7",
+    "url": "/presentation/dist/img/Icon-like-white.4b957876.svg"
+  },
+  {
+    "revision": "71ef8ac764d20004f5f5e685f97854ff",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "27aaa4c4a1c16e6a1b2d",
-    "url": "/presentation/dist/css/about.8ddd3753.css"
+    "revision": "864d34301b58bc7b55ad",
+    "url": "/presentation/dist/css/about.10b781cb.css"
   }
 ];
