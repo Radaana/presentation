@@ -1,5 +1,5 @@
 <template lang="pug">
-  .comments.chat-line
+  .comments.chat-line(ref="chatline")
     button-back
     .comments__title Все  комментарии:
     .comments__thread
@@ -26,7 +26,10 @@ export default {
       'getGuestComments'
     ]),
   },
-  methods: {}
+  methods: {},
+  mounted() {
+    window.scrollTo(0, this.$refs.chatline.offsetHeight); 
+  },
 }
 </script>
 

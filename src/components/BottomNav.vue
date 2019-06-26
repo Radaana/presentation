@@ -13,6 +13,7 @@ export default {
       let chatline = document.querySelector('.chat-line');
       let css = chatline.getAttribute('style') ? chatline.getAttribute('style') + style : style;
       chatline.setAttribute("style",  css);
+      // chatline.style.paddingBottom = (this.$refs.bottom.offsetHeight + 16) + "px;"
     }
   },
     mounted() {

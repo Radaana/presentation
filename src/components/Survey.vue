@@ -61,6 +61,7 @@ export default {
       let chatline = document.querySelector('.chat-line');
       let css = chatline.getAttribute('style') ? chatline.getAttribute('style') + style : style;
       chatline.setAttribute("style",  css);
+      // chatline.style.paddingTop = (this.$refs.survey.offsetHeight + 16) + "px;"
     }
   },
   mounted() {

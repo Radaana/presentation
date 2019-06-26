@@ -3,8 +3,10 @@
     .input-message(ref="input")
       form.form
         router-link.form__back(to="/")
-        input.form__input(type="text" autofocus v-model="inputText")
-        button.form__submit(type="submit" @click.prevent="inputSubmit()")
+        input.form__input(type="text"  v-model="inputText" @focus="inputFocus()")
+        button.form__submit(type="submit" @click.prevent="inputSubmit()" ref="submit"  )
+        transition(name="message")
+          .form__message(v-show="showMessage") Сообщение отправлено
 </template>
 
 <script>
@@ -14,6 +16,7 @@ export default {
   data() {
     return {
       inputText: '',
+      showMessage: false,
     }
   },
   computed: {
@@ -25,15 +28,32 @@ export default {
     sendHeight() {
       let style = "padding-bottom:" + (this.$refs.input.offsetHeight + 16) + "px;";
       let chatline = document.querySelector('.chat-line');
-      let css = chatline.getAttribute('style') ? chatline.getAttribute('style') + style : style;
-      chatline.setAttribute("style",  css);
+      chatline.setAttribute("style",  style);
     },
     inputSubmit() {
-      let isQuestion = this.$route.path == '/questions';
-      let text = this.inputText;
-      let payload = { text,isQuestion };
-      this.$store.dispatch('addGuestMessage', payload);
-    }
+      if(this.inputText) {
+        this.$refs.submit.setAttribute("disabled",  "disabled");
+        this.showMessage = true;
+        let isQuestion = this.$route.path == '/questions';
+        let text = this.inputText;
+        let payload = { text,isQuestion };
+        this.$store.dispatch('addGuestMessage', payload).then( () => {
+          window.scrollTo(0, document.querySelector('.chat-line').offsetHeight);
+          
+          setTimeout(()=> {
+            this.showMessage = false;
+            this.$refs.submit.removeAttribute("disabled");
+          }, 1500)
+          
+        });
+        this.inputText = '';
+      }
+    },
+    inputFocus() {
+      console.log('---<<<<<< FOCUS');
+      window.scrollTo(window.scrollX, window.scrollY);
+      document.querySelector('.chat-line').style.height = '100VH';
+    },
   },
   mounted() {
     this.sendHeight();
@@ -112,6 +132,29 @@ export default {
       left: 3px;
     }
   }
+  &__message {
+    position: absolute;
+    font-size: 12px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #FFA800;
+  }
 }
+
+.message-enter-active {
+  transition: all .5s ease;
+}
+.message-leave-active {
+  transition: all .5s ease;
+}
+.message-enter, .message-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(100);
+  opacity: 0;
+}
+
 
 </style>

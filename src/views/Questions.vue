@@ -1,5 +1,5 @@
 <template lang="pug">
-  .questions.chat-line
+  .questions.chat-line(ref="chatline")
     button-back
     .questions__title Все  вопросы:
     .questions__thread
@@ -30,7 +30,7 @@ export default {
   },
   methods: {},
   mounted() {
-    window.scrollTo(window.scrollX, window.scrollY);
+    window.scrollTo(0, this.$refs.chatline.offsetHeight); 
   },
 }
 </script>

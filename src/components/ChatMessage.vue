@@ -49,8 +49,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-
 .bubble {
   min-height: 50px;
   padding: 16px;
