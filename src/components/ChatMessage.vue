@@ -126,6 +126,7 @@ export default {
     line-height: 28px;
     color: #858E99;
     font-size: 12px;  
+    outline: none;
 
     &--active {
       background-image: url('../assets/Icon-like-red.svg');

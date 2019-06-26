@@ -29,11 +29,9 @@ export default {
       chatline.setAttribute("style",  css);
     },
     inputSubmit() {
-      console.log(this.$route.path);
       let isQuestion = this.$route.path == '/questions';
       let text = this.inputText;
       let payload = { text,isQuestion };
-      console.log(payload)
       this.$store.dispatch('addGuestMessage', payload);
     }
   },
