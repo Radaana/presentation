@@ -50,13 +50,11 @@ export default {
       }
     },
     inputFocus() {
-      console.log('---<<<<<< FOCUS');
       this.$refs.input.classList.add('move');
       window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
       
     },
     inputBlur() {
-      console.log('---<<<<<< BLUR');
       this.$refs.input.classList.remove('move');
     },
   },
@@ -76,7 +74,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 44px;
+  height: 50px;
   background-color: #fff;
   z-index: 1000;
 
@@ -97,7 +95,7 @@ export default {
     padding: 0;
     background-image: url('../assets/Icon-arrow-left.svg');
     background-repeat: no-repeat;
-    background-position: 13px 11px;
+    background-position: 13px center;
     background-color: #fff;
     border: none;
     display: block;
@@ -109,14 +107,15 @@ export default {
     flex-grow: 1;
     margin-right: 13px;
     font-size: 16px;
+    height: 35px;
   }
   &__submit {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     padding: 0;
     // background-image: url('../assets/Icon-like-red.svg');
     // background-size: 20px 20px;
@@ -125,21 +124,11 @@ export default {
 
     &::before {
       content: "";
-      border: 10px solid transparent;	border-left: 10px solid #000;
+      border: 13px solid transparent;	border-left: 13px solid #000;
       padding: 0;
       position: absolute;
-      top:0;
-    }
-    &::after {
-      content: "";
-      width: 8px;
-      height: 5px;
-      background-color: #000;
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 3px;
+      top: 0;
+      left: 10px;
     }
   }
   &__message {
