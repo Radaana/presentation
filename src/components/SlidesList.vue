@@ -136,7 +136,8 @@ export default {
   transition: all .5s ease;
 }
 .menu-leave-active {
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  // transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .3s ease-out;
 }
 .menu-enter, .menu-leave-to
 /* .slide-fade-leave-active до версии 2.1.8 */ {

@@ -3,7 +3,7 @@
     .input-message(ref="input")
       form.form
         router-link.form__back(to="/")
-        input.form__input(type="text"  v-model="inputText" @focus="inputFocus()")
+        input.form__input(type="text"  v-model="inputText" @focus="inputFocus()" @blur="inputBlur()")
         button.form__submit(type="submit" @click.prevent="inputSubmit()" ref="submit"  )
         transition(name="message")
           .form__message(v-show="showMessage") Сообщение отправлено
@@ -51,8 +51,28 @@ export default {
     },
     inputFocus() {
       console.log('---<<<<<< FOCUS');
-      window.scrollTo(window.scrollX, window.scrollY);
-      document.querySelector('.chat-line').style.height = '100VH';
+      // window.scrollTo(window.scrollX, window.scrollY);
+      // document.querySelector('.chat-line').style.height = (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight);
+      // let style = "bottom:" + "-" + this.$refs.input.offsetHeight + "px;";
+      // this.$refs.input.setAttribute("style",  style);
+      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
+      // window.scrollTo(window.scrollX, window.scrollY);
+      this.$refs.input.classList.add('move');
+      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
+      // var foo = window.getComputedStyle(this.$refs.input, null);
+      // this.$refs.input.style.display = 'none';
+      // this.$refs.input.style.display = 'block';
+
+      // document.querySelector('.chat-line').deleteAttribute("style");
+      
+    },
+    inputBlur() {
+      console.log('---<<<<<< BLUR');
+      // window.scrollTo(window.scrollX, window.scrollY);
+      // document.querySelector('.chat-line').style.height = '100VH';
+      // let style = "bottom:" + "-" + (this.$refs.input.offsetHeight + 16) + "px;";
+      // this.$refs.input.deleteAttribute("style");
+      this.$refs.input.classList.remove('move');
     },
   },
   mounted() {
@@ -73,7 +93,12 @@ export default {
   right: 0;
   height: 44px;
   background-color: #fff;
-  z-index: 100;
+  z-index: 1000;
+
+  &.move {
+    bottom: -60px;
+    position: absolute;
+  }
 }
 .form {
   display: flex;

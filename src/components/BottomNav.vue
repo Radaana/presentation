@@ -42,6 +42,7 @@ export default {
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) {
       height: 80px;
+      // padding-bottom: calc(16px + env(safe-area-inset-bottom));
      }
 
   &__link {

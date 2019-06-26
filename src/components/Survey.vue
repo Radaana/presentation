@@ -49,9 +49,11 @@ export default {
       this.$store.dispatch('changeLike', like)
     },
     clickBurger(flag) {
-      this.$store.dispatch('changeSlidesListAppearance', flag);
-      document.querySelector('body').setAttribute("style",  "overflow: hidden")
-      document.querySelector('.slides').setAttribute("style",  "overflow-y: scroll;")
+      this.$store.dispatch('changeSlidesListAppearance', flag).then( () => {
+        document.querySelector('body').setAttribute("style",  "overflow: hidden; position: fixed;");
+        document.querySelector('.slides').setAttribute("style",  "overflow-y: scroll;")
+      });
+      
     },
     updateRadioButton(answer) {
       this.$store.dispatch('changeAnswer', answer)
