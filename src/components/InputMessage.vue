@@ -51,27 +51,12 @@ export default {
     },
     inputFocus() {
       console.log('---<<<<<< FOCUS');
-      // window.scrollTo(window.scrollX, window.scrollY);
-      // document.querySelector('.chat-line').style.height = (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight);
-      // let style = "bottom:" + "-" + this.$refs.input.offsetHeight + "px;";
-      // this.$refs.input.setAttribute("style",  style);
-      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
-      // window.scrollTo(window.scrollX, window.scrollY);
       this.$refs.input.classList.add('move');
-      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
-      // var foo = window.getComputedStyle(this.$refs.input, null);
-      // this.$refs.input.style.display = 'none';
-      // this.$refs.input.style.display = 'block';
-
-      // document.querySelector('.chat-line').deleteAttribute("style");
+      window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
       
     },
     inputBlur() {
       console.log('---<<<<<< BLUR');
-      // window.scrollTo(window.scrollX, window.scrollY);
-      // document.querySelector('.chat-line').style.height = '100VH';
-      // let style = "bottom:" + "-" + (this.$refs.input.offsetHeight + 16) + "px;";
-      // this.$refs.input.deleteAttribute("style");
       this.$refs.input.classList.remove('move');
     },
   },
