@@ -3,7 +3,7 @@
     .input-message(ref="input")
       form.form
         router-link.form__back(to="/")
-        input.form__input(type="text"  v-model="inputText" @focus="inputFocus()" @blur="inputBlur()")
+        input.form__input(type="text" autofocus v-model="inputText" @focus="inputFocus()" @blur="inputBlur()")
         button.form__submit(type="submit" @click.prevent="inputSubmit()" ref="submit" @focus.stop="submitFocus()" )
         transition(name="message")
           .form__message(v-show="showMessage") Сообщение отправлено
