@@ -123,15 +123,6 @@ export default {
     background-repeat: no-repeat;
     border: none;
     background-color: #fff;
-
-    // &::before {
-    //   content: "";
-    //   border: 13px solid transparent;	border-left: 13px solid #000;
-    //   padding: 0;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 10px;
-    // }
   }
   &__message {
     position: absolute;
@@ -151,8 +142,7 @@ export default {
 .message-leave-active {
   transition: all .5s ease;
 }
-.message-enter, .message-leave-to
-/* .slide-fade-leave-active до версии 2.1.8 */ {
+.message-enter, .message-leave-to {
   transform: translateX(100);
   opacity: 0;
 }

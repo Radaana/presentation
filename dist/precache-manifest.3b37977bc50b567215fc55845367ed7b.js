@@ -1,18 +1,18 @@
 self.__precacheManifest = [
   {
-    "revision": "c44366ca51e68b887b3089aa3546fc8c",
-    "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
+    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
+    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/presentation/dist/robots.txt"
   },
   {
-    "revision": "d63de15e45067b8bda47dafa5e295c5f",
-    "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
+    "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
+    "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
   },
   {
-    "revision": "d7f75da1d2e0627ef5d8",
+    "revision": "fd00e355786039616f89",
     "url": "/presentation/dist/css/app.16fa4fcf.css"
   },
   {
@@ -20,24 +20,24 @@ self.__precacheManifest = [
     "url": "/presentation/dist/js/chunk-vendors.107b7308.js"
   },
   {
-    "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
-    "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
+    "revision": "c44366ca51e68b887b3089aa3546fc8c",
+    "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
+  },
+  {
+    "revision": "d63de15e45067b8bda47dafa5e295c5f",
+    "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
   },
   {
     "revision": "ef3b122d16a4c3373f016caa7b338f7c",
     "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
   },
   {
-    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
-    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
+    "revision": "36e4b7edaa69e1940245",
+    "url": "/presentation/dist/js/about.881a2626.js"
   },
   {
-    "revision": "61c0705d58e7d3df536b",
-    "url": "/presentation/dist/js/about.fe535eb2.js"
-  },
-  {
-    "revision": "d7f75da1d2e0627ef5d8",
-    "url": "/presentation/dist/js/app.24370fe7.js"
+    "revision": "fd00e355786039616f89",
+    "url": "/presentation/dist/js/app.e00395ef.js"
   },
   {
     "revision": "89459af6f641ebee99d42e79f27aadc0",
@@ -60,11 +60,11 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-down.d172b6af.svg"
   },
   {
-    "revision": "9741a6267b57960f243e97da25163986",
+    "revision": "ed31f287b15795a30f4ad0e45a7395b3",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "61c0705d58e7d3df536b",
-    "url": "/presentation/dist/css/about.251ca087.css"
+    "revision": "36e4b7edaa69e1940245",
+    "url": "/presentation/dist/css/about.27514693.css"
   }
 ];

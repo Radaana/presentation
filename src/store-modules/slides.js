@@ -27,6 +27,13 @@ let state = {
             image: "http://i.picasion.com/images/example.jpg",
             text: "И снова о температуре"
         },
+        {
+            ID: 5,
+            shareLink: "#",
+            like: false,
+            image: "http://i.picasion.com/images/example.jpg",
+            text: "И еще разочек"
+        },
     ],
     showSlidesList: false,
     presentationTitle: "Песня про мороз"
