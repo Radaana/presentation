@@ -1,18 +1,18 @@
 self.__precacheManifest = [
   {
-    "revision": "ef3b122d16a4c3373f016caa7b338f7c",
-    "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
+    "revision": "d63de15e45067b8bda47dafa5e295c5f",
+    "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/presentation/dist/robots.txt"
   },
   {
-    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
-    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
+    "revision": "c44366ca51e68b887b3089aa3546fc8c",
+    "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
   },
   {
-    "revision": "a91f56c2f58bff24f01a",
+    "revision": "45792fe95def022491d0",
     "url": "/presentation/dist/css/app.16fa4fcf.css"
   },
   {
@@ -20,24 +20,24 @@ self.__precacheManifest = [
     "url": "/presentation/dist/js/chunk-vendors.107b7308.js"
   },
   {
-    "revision": "c44366ca51e68b887b3089aa3546fc8c",
-    "url": "/presentation/dist/img/Icon-arrow-left.c44366ca.svg"
+    "revision": "ef3b122d16a4c3373f016caa7b338f7c",
+    "url": "/presentation/dist/img/Icon-share-black.ef3b122d.svg"
   },
   {
-    "revision": "d63de15e45067b8bda47dafa5e295c5f",
-    "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
+    "revision": "955b3fc5db0b3223d0213e95d96df3d1",
+    "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
     "revision": "da6d341b8ad3f06c3ad2f23a09494fac",
     "url": "/presentation/dist/img/Icon-like-red.da6d341b.svg"
   },
   {
-    "revision": "f8c53246ca8a36246183",
-    "url": "/presentation/dist/js/about.bc1448e8.js"
+    "revision": "3725ce423c28d871749a",
+    "url": "/presentation/dist/js/about.a4304a89.js"
   },
   {
-    "revision": "a91f56c2f58bff24f01a",
-    "url": "/presentation/dist/js/app.36ed6fa0.js"
+    "revision": "45792fe95def022491d0",
+    "url": "/presentation/dist/js/app.e545dc0d.js"
   },
   {
     "revision": "89459af6f641ebee99d42e79f27aadc0",
@@ -60,11 +60,11 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-down.d172b6af.svg"
   },
   {
-    "revision": "7889ef38b1228371bb1a7cc81d8cc2ae",
+    "revision": "b178f3a441a53219da792d9370c5e504",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "f8c53246ca8a36246183",
-    "url": "/presentation/dist/css/about.74ea7890.css"
+    "revision": "3725ce423c28d871749a",
+    "url": "/presentation/dist/css/about.4415bc09.css"
   }
 ];

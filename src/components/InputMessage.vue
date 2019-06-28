@@ -62,6 +62,7 @@ export default {
   mounted() {
     this.sendHeight();
     this.$refs.field.focus();
+    window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
   },
   updated() {
     this.sendHeight();
