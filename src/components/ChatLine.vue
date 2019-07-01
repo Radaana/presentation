@@ -32,6 +32,9 @@ export default {
       document.querySelector('.chat-line').setAttribute("style", style);
     }
   },
+  mounted() {
+    window.scrollTo(0, 9999 ); 
+  },
 }
 </script>
 

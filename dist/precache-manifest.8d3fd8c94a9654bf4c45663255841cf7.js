@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-up.d63de15e.svg"
   },
   {
-    "revision": "45792fe95def022491d0",
-    "url": "/presentation/dist/css/app.16fa4fcf.css"
+    "revision": "ffa784618d964829a326",
+    "url": "/presentation/dist/css/app.92d17394.css"
   },
   {
     "revision": "1985445b5257eb0cfc59",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-like-black.955b3fc5.svg"
   },
   {
-    "revision": "3725ce423c28d871749a",
-    "url": "/presentation/dist/js/about.a4304a89.js"
+    "revision": "e3d22379236f95557773",
+    "url": "/presentation/dist/js/about.8bd4717b.js"
   },
   {
-    "revision": "45792fe95def022491d0",
-    "url": "/presentation/dist/js/app.e545dc0d.js"
+    "revision": "ffa784618d964829a326",
+    "url": "/presentation/dist/js/app.f89cfbb6.js"
   },
   {
     "revision": "89459af6f641ebee99d42e79f27aadc0",
@@ -60,11 +60,11 @@ self.__precacheManifest = [
     "url": "/presentation/dist/img/Icon-arrow-down.d172b6af.svg"
   },
   {
-    "revision": "b178f3a441a53219da792d9370c5e504",
+    "revision": "56f3a8ef56548e2186dba1ad6dbd4282",
     "url": "/presentation/dist/index.html"
   },
   {
-    "revision": "3725ce423c28d871749a",
-    "url": "/presentation/dist/css/about.4415bc09.css"
+    "revision": "e3d22379236f95557773",
+    "url": "/presentation/dist/css/about.bc771e4a.css"
   }
 ];

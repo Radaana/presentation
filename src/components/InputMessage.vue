@@ -50,19 +50,46 @@ export default {
       }
     },
     inputFocus() {
-      this.$refs.input.classList.add('move');
-      window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
-      
+      // this.$refs.input.classList.add('move');
+      //  window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
+      window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight - window.innerHeight) );
+      // document.querySelector('html').setAttribute("style",  "overflow: hidden; position: fixed;");
+      // document.querySelector('body').setAttribute("style",  "overflow: hidden; position: fixed;");
+      document.querySelector('.chat-line').addEventListener('touchmove', this.preventScrolling(event), false);
+      // window.scrollTo(0, 0);
+      // document.body.scrollTop = 0;
+
+      setTimeout( () => {
+        // document.querySelector('html').setAttribute("style",  'height:100vh;');
+      // document.querySelector('html').setAttribute("style",  'height:100vh;');
+      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
+      }, 40)
+ 
     },
     inputBlur() {
-      this.$refs.input.classList.remove('move');
+      // this.$refs.input.classList.remove('move');
+      // document.querySelector('html').setAttribute("style",  "")
+      // document.querySelector('body').setAttribute("style",  "")
+        document.querySelector('.chat-line').removeEventListener('touchmove', this.preventScrolling(event), false);
+       window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
     },
     submitFocus() {},
+    preventScrolling(event) {
+      if (event.targetTouches.length === 1) {
+        event.preventDefault();
+      }
+    },
   },
   mounted() {
     this.sendHeight();
     this.$refs.field.focus();
-    window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) ); 
+    // setTimeout( () => {
+    //   document.querySelector('html').setAttribute("style",  'height:100vh;');
+    //   window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
+    // }, 40)
+    // document.querySelector('html').setAttribute("style",  'height:100vh;');
+    window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight - this.$refs.input.offsetHeight) ); 
+    // window.scrollTo(0, 9999 ); 
   },
   updated() {
     this.sendHeight();
@@ -73,11 +100,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .input-message {
+  // position: absolute;
   position: fixed;
+  margin-top: auto;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 51px;
   background-color: #fff;
   z-index: 1000;
 
