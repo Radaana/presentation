@@ -50,28 +50,12 @@ export default {
       }
     },
     inputFocus() {
-      // this.$refs.input.classList.add('move');
-      //  window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
       window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight - window.innerHeight) );
-      // document.querySelector('html').setAttribute("style",  "overflow: hidden; position: fixed;");
-      // document.querySelector('body').setAttribute("style",  "overflow: hidden; position: fixed;");
       document.querySelector('.chat-line').addEventListener('touchmove', this.preventScrolling(event), false);
-      // window.scrollTo(0, 0);
-      // document.body.scrollTop = 0;
-
-      setTimeout( () => {
-        // document.querySelector('html').setAttribute("style",  'height:100vh;');
-      // document.querySelector('html').setAttribute("style",  'height:100vh;');
-      // window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
-      }, 40)
- 
     },
     inputBlur() {
-      // this.$refs.input.classList.remove('move');
-      // document.querySelector('html').setAttribute("style",  "")
-      // document.querySelector('body').setAttribute("style",  "")
-        document.querySelector('.chat-line').removeEventListener('touchmove', this.preventScrolling(event), false);
-       window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
+      document.querySelector('.chat-line').removeEventListener('touchmove', this.preventScrolling(event), false);
+      window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
     },
     submitFocus() {},
     preventScrolling(event) {
@@ -83,13 +67,7 @@ export default {
   mounted() {
     this.sendHeight();
     this.$refs.field.focus();
-    // setTimeout( () => {
-    //   document.querySelector('html').setAttribute("style",  'height:100vh;');
-    //   window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight + this.$refs.input.offsetHeight) );
-    // }, 40)
-    // document.querySelector('html').setAttribute("style",  'height:100vh;');
     window.scrollTo(0, (document.querySelector('.chat-line').offsetHeight - this.$refs.input.offsetHeight) ); 
-    // window.scrollTo(0, 9999 ); 
   },
   updated() {
     this.sendHeight();

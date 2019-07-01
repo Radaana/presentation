@@ -43,8 +43,6 @@ export default {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    // min-height: calc(100vh-80px);
-    // width: 100%;
 
     &__title {
       color: #858E99;
